@@ -1,0 +1,317 @@
+:root {
+    overflow: hidden;
+    /* background-image: url(./images/layered-waves-haikei.svg); */
+    /* background-image: url(./images/blob-scene-haikei.svg); */
+    background-image: url(./images/blob-scene-haikei\ \(1\).svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    background-color: #000b14;
+    font-family: 'Roboto Mono', monospace;
+}
+
+/* Kyle Added some animation*/
+h1 {
+ 
+    width: 100%;
+    font-size: 25px;
+    height: 50px;
+    position: center;
+    animation: mymove 5s infinite;
+    text-align:center;
+    margin:0%;
+}
+button {
+    height: 20px;
+    width: 50px;
+}
+@keyframes mymove {
+    0% {
+        color: #83ff00;
+        left: 0px;
+        top: 0px;
+    }
+
+    25% {
+        color: #00d172;
+        left: 200px;
+        top: 0px;
+    }
+
+    50% {
+        color: #008994;
+        left: 200px;
+        top: 200px;
+    }
+
+    75% {
+        color: #00d172;
+        left: 0px;
+        top: 200px;
+    }
+
+    100% {
+        color: #83ff00;
+        left: 0px;
+        top: 0px;
+    }
+}
+
+.groceryinput:hover {
+    background-color: #38f140;
+}
+
+#searchbtn:hover {
+    background-color: #38f140;
+}
+
+.btnP:hover {
+    background-color: #38f140;
+}
+
+
+/* Kyle Ends here */
+.cardcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}
+
+.resultcard {
+    padding-top: 20px;
+    display:flex;
+    width: 55vw;
+    height:55vh;
+}
+
+.card {
+    background-color: rgba(0, 22, 40, 0.4);
+    display: flex;
+    justify-content: center;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.4);
+    border-radius: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 300px;
+    margin: 50px;
+    box-shadow: #000b14 7px 10px 25px;
+}
+
+.modal {
+    background-color:  rgba(0, 22, 40, 0.7) ;
+    border-style: solid;
+    border-color: rgba(255, 255, 255);
+    border-radius: 15px;
+    position: fixed;
+}
+
+
+
+.searchcard {
+    width: 25vw;
+    height: 25vh;
+
+}
+
+.cardtitle {
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    text-shadow: #0e1822 3px 3px 3px;
+}
+
+h3 {
+    background-color: rgba(0, 0, 0, .4);
+    border-radius: 25px;
+    padding: 5px;
+    padding-bottom: 7px;
+
+}
+
+input {
+
+    border-radius: 20px;
+    width: 10vw;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: bolder
+}
+
+.searchbtn {
+    font-size: 20px;
+    border-radius: 20px;
+    width: 400px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.8);
+
+}
+
+.reloadbtn{
+    color: white;
+    margin-left:60px;
+    margin-top: 7px;
+    font-size: 20px;
+    border-radius: 20px;
+    border-style: none;
+    width: 40px;
+    height: 40px;
+    background-color:transparent;  
+
+}
+
+.btnP{
+    text-align: center;
+    font-weight: bolder;
+    margin: 10px;
+    font-size: 18px;
+    width: 200px;
+    height:auto;
+    border-radius: 20px;
+    padding-bottom: 5px;
+    
+}
+
+.product_btn {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.modalbtn{
+    box-shadow: none;
+    border-style: none;
+    position: fixed;
+    margin-top: 10px;
+    margin-left:10px;
+    background-color: transparent;
+    transition: all .2s ease-in-out;
+}
+
+.modalbtn:hover{
+    background-color:transparent;
+    color:#38f140;
+    box-shadow: none;
+    transform: scale(1.4)
+}
+
+.reloadcontainer {
+    display: flex;
+    justify-content:end;
+    width: 100%;
+    z-index: +1;
+}
+
+.errormsg {
+    margin-top: 50px;
+}
+
+
+.reloadbtn:hover {
+        animation: 1s linear 0s rotate;
+        animation-iteration-count: infinite;
+        color:#38f140;
+        background-color: transparent;
+    }
+
+    .slidedownout {
+        animation: 1s ease-out 0s slidedownout;
+        animation-fill-mode: forwards;
+    }
+    
+    .slidedownin {
+        animation: 1s ease-out 0s slidedownin;
+        animation-fill-mode: forwards;
+    
+    }
+
+    @keyframes rotate{
+        from {
+            transform:rotate(0deg)
+        } to {
+            transform:rotate(360deg)
+        }
+    }
+    
+    @keyframes slidedownout {
+        0% {
+            transform: translateY(0%);
+          }
+          20% {
+            transform: translateY(-30%);
+          }
+          100% {
+            transform: translateY(600%);
+          }
+    }
+    
+    @keyframes slidedownin {
+        0% {
+            transform: translateY(-600%);
+          }
+          80% {
+            transform: translateY(30%);
+          }
+          100% {
+            transform: translateY(0);
+          }
+    }
+    
+
+    @media only screen and (max-width: 600px) {
+        :root {
+            overflow: scroll;
+        }
+
+        .card{
+            width:400px;
+            margin: auto;
+            height:325px;
+            
+        }
+
+        .resultcard {
+            height: 650px;
+        }
+
+        .cardtitle {
+            width: 300px;
+        }
+
+        .searchbtn {
+            width:300px;
+        }
+
+
+    }
+
+    @media only screen and (max-width: 400px) {
+        .cardcontainer {
+            margin-top: 50px;
+        }
+
+        .card{
+            width:300px;
+            margin: auto;
+            padding: 5px;
+            height:200px;
+            font-size: smaller;
+        }
+
+        .resultcard {
+            height: 525px;
+        }
+
+        .cardtitle {
+            width: 250px;
+        }
+
+        .searchbtn {
+            width:250px;
+        }
+
+
+    }
+
